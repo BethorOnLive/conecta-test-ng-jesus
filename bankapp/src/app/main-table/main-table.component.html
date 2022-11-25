@@ -1,0 +1,29 @@
+<div class="main-content">
+    <div>
+        <h3>
+          MOVIMIENTOS
+        </h3>
+        <ngx-datatable
+          class="bootstrap"
+          [rows]=""
+          
+          [headerHeight]="50"
+          [footerHeight]="50"
+          
+          [scrollbarV]="true"
+          
+        >
+          <ngx-datatable-column name="Fecha" [width]="200">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              <strong>{{ value }}</strong>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Descripción" [width]="400">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <i [innerHTML]="row['name']"></i> and <i>{{ value }}</i>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Monto" prop="height" [width]="80"> </ngx-datatable-column>
+        </ngx-datatable>
+      </div>
+</div>

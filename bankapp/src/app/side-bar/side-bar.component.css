@@ -1,0 +1,52 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 360px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .card{
+    width: 320px;
+    color: white;
+    background-color: #07BE92;
+    border-radius: 5px;
+    line-height: .2rem;
+    margin: 25px 0;
+    margin-left: 5px;
+    padding: 15px 10px 20px 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .card strong{
+    display: block;
+    text-align: end;
+    font-weight: bold;
+  }
+
+  .card-logo{
+    width: 40px;
+    text-align: end;
+    margin-left: 85%;
+  }
+
+  .add-card{
+    border: dashed #07BE92 3px;
+    background-color: white;
+    color: #07BE92;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar div {float: left;}
+  }
+  

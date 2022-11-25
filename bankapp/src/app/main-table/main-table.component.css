@@ -1,0 +1,26 @@
+.main-content{
+    margin-left: 400px;
+    padding: 1px 16px;
+    height: 1000px;
+    color: #4B4B4B;
+}
+@media screen and (max-width: 700px) {
+    .main-content {margin-left: 0;}
+  }
+
+@media screen and (max-width: 800px) {
+    .desktop-hidden {
+      display: initial;
+    }
+    .mobile-hidden {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .desktop-hidden {
+      display: none;
+    }
+    .mobile-hidden {
+      display: initial;
+    }
+  }

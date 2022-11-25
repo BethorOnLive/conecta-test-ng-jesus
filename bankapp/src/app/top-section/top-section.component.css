@@ -1,0 +1,39 @@
+.top-container{
+    background-color: #00455C;
+    padding-bottom: 20px;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.basic-card{
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 250px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 150px));
+    align-content: center;
+}
+.success-text{
+    color: #07BE92;
+    display: block;
+    font-size: 1.7rem;
+}
+.text-basic-card{
+    color: #0290BC;
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .top-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .basic-card{
+        margin-top: 0;
+    }    
+}
