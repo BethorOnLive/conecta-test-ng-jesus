@@ -1,7 +1,14 @@
 <section class="top-container">
     <div class="basic-card">
         <small class="text-basic-card">SALDO GENERAL EN CUENTAS</small>
-        <h2 class="success-text">$2000.00</h2>
+        <h2 class="success-text">${{ dataBalance[0]?.saldoGeneral }}.00</h2>
     </div>
-    
+    <div class="basic-card">
+        <small class="text-basic-card">TOTAL DE INGRESOS</small>
+        <h2 class="success-text">${{ dataBalance[0]?.ingresos }}.00</h2>
+    </div>
+    <div class="basic-card">
+        <small class="text-basic-card">TOTAL DE GASTOS</small>
+        <h2 class="success-text">${{ dataBalance[0]?.gastos }}.00</h2>
+    </div>
 </section>

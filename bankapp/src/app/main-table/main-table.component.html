@@ -1,29 +1,38 @@
 <div class="main-content">
     <div>
-        <h3>
+        <h5 class="table-title">
           MOVIMIENTOS
-        </h3>
+        </h5>
         <ngx-datatable
-          class="bootstrap"
-          [rows]=""
-          
+          class="bootstrap core-bootstrap"
+          [rows]="dataTransaction"
+          [rowHeight]="50"
           [headerHeight]="50"
           [footerHeight]="50"
-          
-          [scrollbarV]="true"
-          
+          [scrollbarH]="true"
         >
           <ngx-datatable-column name="Fecha" [width]="200">
-            <ng-template let-value="value" ngx-datatable-cell-template>
-              <strong>{{ value }}</strong>
-            </ng-template>
-          </ngx-datatable-column>
-          <ngx-datatable-column name="Descripción" [width]="400">
             <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-              <i [innerHTML]="row['name']"></i> and <i>{{ value }}</i>
+              <strong>{{ row.fecha }}</strong>
             </ng-template>
           </ngx-datatable-column>
-          <ngx-datatable-column name="Monto" prop="height" [width]="80"> </ngx-datatable-column>
+          <ngx-datatable-column name="Descripción" [width]="800">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p>{{ row.descripcion }}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Monto" prop="height" [width]="80">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p
+                [class]="{
+                  'dark': row.tipo === 'abono',
+                  'danger': row.tipo === 'cargo'
+                }"
+              >
+                {{ row.monto }}
+              </p>
+            </ng-template>
+          </ngx-datatable-column>
         </ngx-datatable>
       </div>
 </div>

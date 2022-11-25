@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TopSectionService } from './top-section.service';
 
 @Component({
   selector: 'app-top-section',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopSectionComponent implements OnInit {
 
-  constructor() { }
+  dataBalance: any
+
+  constructor(private _balanceService: TopSectionService) { }
+
+  getBalance() {
+    this._balanceService.getBalance().subscribe((response) => {
+       this.dataBalance = response.saldos;
+      console.log("dataBalance: ", this.dataBalance);
+    });
+  }
 
   ngOnInit(): void {
+    this.getBalance();
   }
 
 }

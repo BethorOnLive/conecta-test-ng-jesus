@@ -15,17 +15,20 @@
     margin-top: 20px;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 150px));
+    grid-template-columns: repeat(2, minmax(100px, 170px));
     align-content: center;
 }
 .success-text{
     color: #07BE92;
     display: block;
     font-size: 1.7rem;
+    padding-top: 10px;
 }
 .text-basic-card{
     color: #0290BC;
-    padding-top: 20px;
+    padding-top: 10px;
+    font-size: .7rem;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {

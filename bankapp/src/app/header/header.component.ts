@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from './header.service'
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  dataCount : any
+
+  constructor(private _countsService: HeaderService) { }
+
+  getCount() {
+    this._countsService.getCount().subscribe((response) => {
+       this.dataCount = response.cuenta;
+      console.log("dataCount: ", this.dataCount);
+    });
+  }
 
   ngOnInit(): void {
+    this.getCount();
   }
 
 }

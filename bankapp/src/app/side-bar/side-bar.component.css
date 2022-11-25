@@ -7,18 +7,31 @@
     height: 100%;
     overflow: auto;
   }
+
+  .sidebar-title{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: block;
+  }
   
   .card{
     width: 320px;
     color: white;
-    background-color: #07BE92;
     border-radius: 5px;
     line-height: .2rem;
     margin: 25px 0;
-    margin-left: 5px;
+    margin-left: 20px;
     padding: 15px 10px 20px 10px;
     font-weight: 500;
     font-size: 1.2rem;
+  }
+
+  .card-active{
+    background-color: #07BE92;
+  }
+
+  .card-disabled{
+    background-color: #A1E2D2;
   }
 
   .card strong{

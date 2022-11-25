@@ -1,10 +1,18 @@
 <aside class="sidebar">
-    <div class="card">
-        <strong>$1,500.00</strong>
-        <h5>Activa</h5>
-        <h4>5439 - 2401 - 1234 -1234</h4>
-        <p>Berenice Garcia López</p>
-        <p>Titular</p>
+    <h6 class="sidebar-title">MIS CUENTAS</h6>
+    <div 
+      *ngFor="let card of dataCards"
+      class="card"
+      [class]="{
+        'card-active': card.estado === 'activa',
+        'card-disabled': card.estado === 'desactivada'
+      }" 
+    >
+        <strong>${{ card.saldo }}.00</strong>
+        <h5>{{ card.estado }}</h5>
+        <h4>{{ card.tarjeta }}</h4>
+        <p>{{ card.nombre }}</p>
+        <p>{{ card.tipo }}</p>
         <img src="assets/mastercard.png" alt="Logo mastercard" class="card-logo">
     </div>
     <div class="card add-card" (click)="openLg(content)">

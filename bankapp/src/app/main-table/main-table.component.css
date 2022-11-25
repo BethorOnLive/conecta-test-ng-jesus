@@ -4,6 +4,17 @@
     height: 1000px;
     color: #4B4B4B;
 }
+.table-title{
+  margin-top: 25px;
+}
+.dark{
+  color: #4B4B4B;
+}
+.danger{
+  color: #EA5455;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 700px) {
     .main-content {margin-left: 0;}
   }
