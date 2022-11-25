@@ -7,7 +7,66 @@
         <p>Titular</p>
         <img src="assets/mastercard.png" alt="Logo mastercard" class="card-logo">
     </div>
-    <div class="card add-card">
+    <div class="card add-card" (click)="openLg(content)">
         <p>AGREGAR TARJETA</p>
     </div>
+    <ng-template #content let-modal>
+        <div class="modal-header ">
+            <div class="title-header-modal">
+                <img src="assets/logo.png" alt="Logo de banking" width="100px">
+                <h4 class="modal-title" id="modal-basic-title">Agregar tarjeta</h4>
+            </div>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row">
+                    <div class="col-md-12 col-12 mb-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Número de tarjeta" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-4">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Cuenta" />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-4">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Issuer"/>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-12 mb-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Nombre de la tarjeta"/>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 mb-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Marca"/>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 mb-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Estatus"/>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 mb-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Saldo"/>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 mb-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Tipo de cuenta"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-dark btn-lg" (click)="modal.close('Save click')">Cancelar</button>
+            <button type="button" class="btn btn-success btn-lg">Agregar tarjeta</button>
+        </div>
+    </ng-template>
 </aside>

@@ -40,7 +40,30 @@
     text-align: center;
     cursor: pointer;
   }
-  
+  .add-card p{
+    margin-top: 15px;
+  }
+
+  .btn-success{
+    background-color: #07BE92;
+    margin-left: 10px;
+  }
+
+  .btn-dark{
+    background-color: #F5F5F5;
+    color: #4B4B4B;
+    margin-right: 10px;
+  }
+
+  .title-header-modal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: #4B4B4B;
+  }
+
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;

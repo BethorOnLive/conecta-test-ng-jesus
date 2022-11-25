@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor() { }
+  closeResult = '';
 
+	constructor(private modalService: NgbModal) {}
+
+  openLg(content: any) {
+		this.modalService.open(content, { size: 'lg' });
+	}
+	
   ngOnInit(): void {
   }
 
